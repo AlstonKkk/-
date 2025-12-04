@@ -124,9 +124,9 @@ if __name__ == "__main__":
 
     # 执行预测
     predicted_digit, confidence = predict_digit(model, input_tensor)
-
+    end_time = time.time()  # 记录程序结束时间
     # 显示结果
     print(f"识别结果: 数字 {predicted_digit}, 置信度 {confidence:.2%}")
-    end_time = time.time()  # 记录程序结束时间
+    
     print(f"整个程序运行完成，总耗时 {end_time - start_time:.4f} 秒")
     visualize_prediction(input_tensor, predicted_digit, confidence)
